@@ -7,10 +7,12 @@ header {
   max-width: 50rem;
   margin: 2rem auto 2rem auto;
   text-align: center;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   background: linear-gradient(
     to bottom,
     #010161,
     #8400ff
+    
   );
   padding: 1rem;
   border-radius: 12px;

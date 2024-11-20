@@ -1,0 +1,18 @@
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    background: linear-gradient(
+    to bottom,
+    #010161,
+    #8400ff);
+    color: #c3b3d1;
+    font: inherit;
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 45px;
+}

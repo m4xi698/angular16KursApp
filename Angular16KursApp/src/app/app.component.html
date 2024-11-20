@@ -2,12 +2,20 @@
 
 <main>
     <ul id="users">
+        @for(user of users; track user.id){
         <li>
-            <app-user   [avatar]="users[1].avatar"
-                        [name]="users[1].name"
-                        [id]="users[1].id"
-                        (selectUserEvent)="onSelectUserEvent($event)"
+            <app-user   [avatar]="user.avatar"
+                        [name]="user.name"
+                        [id]="user.id"
+                        (selectUserEvent)="saveSelectUserEvent($event)"
             ></app-user>
         </li>
+    }
     </ul>
+    @if(passedUserId) {
+        <app-task-view      [activeUserId]="passedUserId"
+        ></app-task-view>
+    } @else {
+        <p id="fallback"> No user currently selected</p>
+    }
 </main>
