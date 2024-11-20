@@ -12,8 +12,8 @@
         </li>
     }
     </ul>
-    @if(passedUserId) {
-        <app-task-view      [activeUserId]="passedUserId"
+    @if(passedUserName) {
+        <app-task-view      [activeUserName]="passedUserName"
         ></app-task-view>
     } @else {
         <p id="fallback"> No user currently selected</p>

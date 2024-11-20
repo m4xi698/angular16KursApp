@@ -22,6 +22,6 @@ export class UserComponent {
   }
 
   onUserClick(){
-    this.selectUserEvent.emit(this.id)
+    this.selectUserEvent.emit(this.name)
   }
 }

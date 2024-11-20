@@ -9,5 +9,5 @@ import { DUMMY_USERS } from '../dummy-users';
   styleUrl: './task-view.component.css'
 })
 export class TaskViewComponent {
-  @Input({required : true}) activeUserId! : string ; 
+  @Input({required : true}) activeUserName! : string ; 
 }

@@ -14,9 +14,9 @@ import { TaskViewComponent } from "./task-view/task-view.component";
 
 export class AppComponent {
   users = DUMMY_USERS;
-  passedUserId! : string ;
+  passedUserName! : string ;
 
-  saveSelectUserEvent(id : string){
-    this.passedUserId = id;
+  saveSelectUserEvent(name : string){
+    this.passedUserName = name;
   }
 }
