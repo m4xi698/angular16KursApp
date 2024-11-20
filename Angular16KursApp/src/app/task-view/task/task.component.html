@@ -1,1 +1,14 @@
-<p>task works!</p>
+
+<article>
+    <div>
+        <h2>{{taskTitle}}</h2>
+        <time>{{taskTimeToComplete}}</time>
+        <p>{{taskSummary}}</p>
+    </div>
+</article>
+<p class = "actions">
+    <button (click)="onTaskComplete()">
+        Complete
+    </button>
+</p>
+

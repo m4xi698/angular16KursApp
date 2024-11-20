@@ -1,16 +1,24 @@
 <section id = "tasks">
     <header>
         <p>
-            {{activeUserName}}'s to do's"
+            {{activeUserName}}'s to do's
         </p>
             <button>
                 Add Task
             </button>
     </header>
     <ul>
+        @for(task of tasksForSelectedUser; track task.id){
         <li>
-
+            <app-task
+                [taskTitle]="task.title"
+                [taskId]="task.id"
+                [taskTimeToComplete]="task.dueDate"
+                [taskSummary]="task.summary"
+                (taskCompleted)="onDeleteCompletedTask($event)"
+            ></app-task>
         </li>
+    }
     </ul>
 </section>
     

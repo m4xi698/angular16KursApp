@@ -15,8 +15,12 @@ import { TaskViewComponent } from "./task-view/task-view.component";
 export class AppComponent {
   users = DUMMY_USERS;
   passedUserName! : string ;
+  passedUserId! : string;
+  passedUserAvatar! : string;
 
-  saveSelectUserEvent(name : string){
-    this.passedUserName = name;
+  saveSelectUserEvent(user : UserComponent){
+    this.passedUserName = user.name;
+    this.passedUserId = user.id;
+    this.passedUserAvatar = user.avatar;
   }
 }

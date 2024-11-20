@@ -7,13 +7,14 @@
             <app-user   [avatar]="user.avatar"
                         [name]="user.name"
                         [id]="user.id"
+                        [selected]="user.id===passedUserId"
                         (selectUserEvent)="saveSelectUserEvent($event)"
             ></app-user>
         </li>
     }
     </ul>
     @if(passedUserName) {
-        <app-task-view      [activeUserName]="passedUserName"
+        <app-task-view  [activeUserId]="passedUserId"    [activeUserName]="passedUserName"
         ></app-task-view>
     } @else {
         <p id="fallback"> No user currently selected</p>
