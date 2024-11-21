@@ -51,7 +51,17 @@ export class TaskViewComponent {
   onAddingNewTask(){
     this.addingNewTaskStatus = true;
   }
-  closeNewTaskDialog(status : boolean){
-    this.addingNewTaskStatus = status;
-  }  
+  closeNewTaskDialog(){
+    this.addingNewTaskStatus = false;
+  } 
+  addingNewTask(taskData : ({title : string,summary : string,date : string})){
+    this.dummyTasks.push({
+      id : new Date().getTime().toString(),
+      title : taskData.title,
+      summary : taskData.summary,
+      dueDate : taskData.date,
+      userId : this.activeUserId
+    });
+    this.closeNewTaskDialog();
+  }
 }
