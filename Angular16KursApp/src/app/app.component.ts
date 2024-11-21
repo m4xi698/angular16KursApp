@@ -3,11 +3,12 @@ import { HeaderComponent } from './header/header.component';
 import { UserComponent } from "./user/user.component";
 import { DUMMY_USERS } from './dummy-users';
 import { TaskViewComponent } from "./task-view/task-view.component";
+import { NewTaskComponent } from "./task-view/new-task/new-task.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, UserComponent, TaskViewComponent],
+  imports: [HeaderComponent, UserComponent, TaskViewComponent, NewTaskComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

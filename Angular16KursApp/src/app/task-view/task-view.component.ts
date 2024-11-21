@@ -1,17 +1,19 @@
 import { Component, Input } from '@angular/core';
 import { DUMMY_USERS } from '../dummy-users';
 import { TaskComponent } from "./task/task.component";
+import { NewTaskComponent } from "./new-task/new-task.component";
 
 @Component({
   selector: 'app-task-view',
   standalone: true,
-  imports: [TaskComponent],
+  imports: [TaskComponent, NewTaskComponent],
   templateUrl: './task-view.component.html',
   styleUrl: './task-view.component.css'
 })
 export class TaskViewComponent {
   @Input({required : true}) activeUserName! : string ; 
   @Input({required : true}) activeUserId! : string;
+  addingNewTaskStatus  =  false;
   
   dummyTasks = [
     {
@@ -46,4 +48,10 @@ export class TaskViewComponent {
   onDeleteCompletedTask(id : string){
     this.dummyTasks = this.dummyTasks.filter((task)=> task.id !== id);
   }
+  onAddingNewTask(){
+    this.addingNewTaskStatus = true;
   }
+  closeNewTaskDialog(status : boolean){
+    this.addingNewTaskStatus = status;
+  }  
+}

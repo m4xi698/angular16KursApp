@@ -3,10 +3,13 @@
         <p>
             {{activeUserName}}'s to do's
         </p>
-            <button>
+            <button (click)="onAddingNewTask()">
                 Add Task
             </button>
     </header>
+    <app-new-task   [addingNewTask]="addingNewTaskStatus"
+                    (onClosingNewTaskDialog)="closeNewTaskDialog($event)"
+    ></app-new-task>
     <ul>
         @for(task of tasksForSelectedUser; track task.id){
         <li>
